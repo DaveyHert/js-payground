@@ -1,20 +1,9 @@
-const marksWeight = 78;
-const marksHeight = 1.69;
-const JohnsHeight = 95;
-const JohnsWeight = 5.76;
-let markHigherBMI;
+const button = document.querySelector("button");
+const announce = () => alert("You're old enough");
 
-const marksBMI = marksWeight / marksHeight ** 2;
-const johnsBMI = JohnsWeight / (JohnsHeight * JohnsHeight);
-
-markHigherBMI = marksBMI > johnsBMI;
-console.log(johnsBMI, johnsBMI, markHigherBMI)
-
-if (markHigherBMI) {
-  console.log(`Mark has a higher BMI of ${marksBMI}`);
-} else if (johnsBMI > marksBMI) {
-  console.log(`John has a higher BMI of ${johnsBMI}`);
-} else {
-  console.log(`Both have the same BMI`);
-}
-
+button.addEventListener("click", function () {
+  const age = +prompt("How old are you?");
+  // Loose equlity
+  if (age === 18) announce();
+  else alert("Access Denied!");
+});
