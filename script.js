@@ -1,15 +1,21 @@
+"use strict";
+
 const hobbies = ["Coding", "Anime", "Gaming"];
 
 const person = {
-  name: "Doe",
+  firstName: "David",
   birthYear: 2000,
   friends: ["Mia", "Zoe", "Eli", "Ian", "Kai"],
+  hasID: true,
+
+  // method
+  calcAge: function () {
+    return (this.age = 2023 - this.birthYear);
+  },
 };
 
-const getAge = function (birthYear) {
-  return 2023 - birthYear;
-};
-
-console.log(typeof hobbies);
-console.log(typeof person);
-console.log(typeof getAge);
+console.log(
+  `${person.firstName} is a ${person.calcAge()} year old teacher, and he has ${
+    person.hasID ? "an" : "no"
+  } ID on him`
+);
