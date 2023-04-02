@@ -1,21 +1,27 @@
 "use strict";
 
-const hobbies = ["Coding", "Anime", "Gaming"];
+const john = {
+  fullName: "John Smith",
+  mass: { value: 92, unit: "kg" },
+  height: { value: 1.95, unit: "m" },
 
-const person = {
-  firstName: "David",
-  birthYear: 2000,
-  friends: ["Mia", "Zoe", "Eli", "Ian", "Kai"],
-  hasID: true,
-
-  // method
-  calcAge: function () {
-    return (this.age = 2023 - this.birthYear);
+  calcBMI: function () {
+    return (this.bmi = (this.mass.value / (this.height.value * 2)).toFixed(2));
   },
 };
 
-console.log(
-  `${person.firstName} is a ${person.calcAge()} year old teacher, and he has ${
-    person.hasID ? "an" : "no"
-  } ID on him`
-);
+const mark = {
+  fullName: "Mark Miller",
+  mass: { value: 78, unit: "kg" },
+  height: { value: 1.69, unit: "m" },
+
+  calcBMI: function () {
+    return (this.bmi = (this.mass.value / (this.height.value * 2)).toFixed(2));
+  },
+};
+
+const friendsArray = ["Ed", "Mia", "Vie", "Jimmy", "OJ"];
+
+for (let i = friendsArray.length; i >= 0; i--) {
+  console.log(friendsArray[i], i);
+}
