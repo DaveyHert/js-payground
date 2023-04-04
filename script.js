@@ -1,27 +1,24 @@
 "use strict";
 
-const john = {
-  fullName: "John Smith",
-  mass: { value: 92, unit: "kg" },
-  height: { value: 1.95, unit: "m" },
+const bills = [22, 295, 176, 440, 37, 105, 10, 110, 86, 52];
 
-  calcBMI: function () {
-    return (this.bmi = (this.mass.value / (this.height.value * 2)).toFixed(2));
-  },
-};
+const tips = [];
+const totals = [];
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: { value: 78, unit: "kg" },
-  height: { value: 1.69, unit: "m" },
+function calcTip(bill) {
+  let tip = 0;
 
-  calcBMI: function () {
-    return (this.bmi = (this.mass.value / (this.height.value * 2)).toFixed(2));
-  },
-};
-
-const friendsArray = ["Ed", "Mia", "Vie", "Jimmy", "OJ"];
-
-for (let i = friendsArray.length; i >= 0; i--) {
-  console.log(friendsArray[i], i);
+  if (bill >= 50 && bill <= 300) {
+    tip = (15 / 100) * bill;
+  } else {
+    tip = (20 / 100) * bill;
+  }
+  return tip;
 }
+
+function calTip(bill) {
+  let tip = bill >= 50 && bill <= 300 ? (15 / 100) * bill : (20 / 100) * bill;
+
+  return tip;
+}
+ßß;
