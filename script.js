@@ -1,9 +1,11 @@
-const button = document.querySelector("button");
-const announce = () => alert("You're old enough");
+function scoreSum(scores) {
+  let sum;
 
-button.addEventListener("click", function () {
-  const age = +prompt("How old are you?");
-  // Loose equlity
-  if (age === 18) announce();
-  else alert("Access Denied!");
-});
+  scores.forEach((score) => {
+    sum += score;
+  });
+
+  return sum;
+}
+
+console.log(scoreSum([5, 10, 5]))
