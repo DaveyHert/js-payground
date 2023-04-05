@@ -1,11 +1,10 @@
-function scoreSum(scores) {
-  let sum;
+console.log(getAge(2000));
+console.log(calcAge(2000));
 
-  scores.forEach((score) => {
-    sum += score;
-  });
-
-  return sum;
+function getAge(birthYear) {
+  return 2023 - birthYear;
 }
 
-console.log(scoreSum([5, 10, 5]))
+const calcAge = function (birthYear) {
+  return 2023 - birthYear;
+};
