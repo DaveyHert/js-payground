@@ -1,10 +1,15 @@
-console.log(getAge(2000));
-console.log(calcAge(2000));
+const hobbies = ["Coding", "Anime", "Gaming"];
 
-function getAge(birthYear) {
-  return 2023 - birthYear;
-}
+const person = {
+  name: "Doe",
+  birthYear: 2000,
+  friends: ["Mia", "Zoe", "Eli", "Ian", "Kai"],
+};
 
-const calcAge = function (birthYear) {
+const getAge = function (birthYear) {
   return 2023 - birthYear;
 };
+
+console.log(typeof hobbies);
+console.log(typeof person);
+console.log(typeof getAge);
